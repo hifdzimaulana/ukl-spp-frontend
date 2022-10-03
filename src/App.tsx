@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <h1 className='font-medium text-2xl'>Hello mom</h1>
-    <button onClick={(event) => setCount(count+1)} className='bg-slate-400 rounded-sm px-2 py-1'>click {count}</button>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h1>Landing page</h1>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
