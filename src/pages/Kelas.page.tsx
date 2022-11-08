@@ -1,12 +1,12 @@
 import { Navbar } from "../components";
 
-function Dashboard() {
+function KelasPage() {
   return (
     <div className="bg-slate-100 w-screen h-screen">
       <Navbar />
-      Sistem Pembayaran Sekolah
+      Halo ini Kelas
     </div>
   );
 }
 
-export default Dashboard;
+export default KelasPage;

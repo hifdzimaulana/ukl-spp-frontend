@@ -7,11 +7,11 @@ function Navbar() {
 
   const navs = [
     { name: "Dashboard", path: "/dashboard" },
-    { name: "Petugas", path: "/a" },
-    { name: "Kelas", path: "/e" },
-    { name: "Siswa", path: "/y" },
-    { name: "Pembayaran", path: "/s" },
-    { name: "Reports", path: "/x" },
+    { name: "Petugas", path: "/petugas" },
+    { name: "Kelas", path: "/kelas" },
+    { name: "Siswa", path: "/siswa" },
+    { name: "Pembayaran", path: "/pembayaran" },
+    { name: "Reports", path: "/reports" },
   ];
   const navClass =
     "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
