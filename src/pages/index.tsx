@@ -4,3 +4,4 @@ export { default as Siswa } from "./Siswa.page";
 export { default as Kelas } from "./Kelas.page";
 export { default as Pembayaran } from "./Pembayaran.page";
 export { default as Reports } from "./Reports.page";
+export { default as Login } from "./Login.page";

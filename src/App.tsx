@@ -1,5 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Dashboard, Kelas, Pembayaran, Petugas, Reports, Siswa } from "./pages";
+import {
+  Dashboard,
+  Kelas,
+  Login,
+  Pembayaran,
+  Petugas,
+  Reports,
+  Siswa,
+} from "./pages";
 
 function App() {
   return (
@@ -11,6 +19,7 @@ function App() {
         <Route path="/kelas" element={<Kelas />} />
         <Route path="/pembayaran" element={<Pembayaran />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
