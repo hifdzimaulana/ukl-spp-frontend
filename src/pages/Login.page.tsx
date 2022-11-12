@@ -1,9 +1,19 @@
+import { useForm } from "react-hook-form";
+import { SubmitHandler } from "react-hook-form/dist/types";
+import { ILoginForm } from "../types/form.type";
+
 function LoginPage() {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit: SubmitHandler<ILoginForm> = async (data) => {
+    location.href = "/dashboard";
+  };
+
   return (
     <div className="grid place-items-center h-screen">
       <div className="w-[30rem] bg-white shadow-md rounded px-8 pt-6 pb-8 flex flex-col">
-        <form>
-          <div className="mx-auto mb-2 flex items-center">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-2 flex items-center justify-center gap-1">
             <img
               src="https://img.icons8.com/ios-glyphs/90/000000/money-transfer.png"
               width={40}
@@ -23,6 +33,7 @@ function LoginPage() {
               id="username"
               type="text"
               placeholder="Username"
+              {...register("username")}
             />
           </div>
           <div className="mb-6">
@@ -37,6 +48,7 @@ function LoginPage() {
               id="password"
               type="password"
               placeholder="******************"
+              {...register("password")}
             />
             <p className="text-red text-xs italic">
               Please insert your password.
@@ -45,7 +57,7 @@ function LoginPage() {
           <div className="flex items-center justify-between">
             <button
               className="bg-blue-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-              type="button"
+              type="submit"
             >
               Sign In
             </button>
