@@ -17,7 +17,7 @@ class AuthService {
         if (response.data.loggedIn) {
           localStorage.setItem(
             this.tokenName,
-            JSON.stringify(response.data.accessToken)
+            <string>response.data.accessToken
           );
           return true;
         } else {
