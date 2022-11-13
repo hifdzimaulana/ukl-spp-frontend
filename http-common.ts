@@ -1,8 +1,10 @@
 import axios from "axios";
 
+const AccessToken = localStorage.getItem(import.meta.env.VITE_ACCESS_TOKEN);
+
 export default axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
-    "Content-type": "application/json",
+    Authorization: AccessToken ? "Bearer " + AccessToken : undefined,
   },
 });
