@@ -2,11 +2,18 @@ import { useForm } from "react-hook-form";
 import { SubmitHandler } from "react-hook-form/dist/types";
 import { ILoginForm } from "../types/form.type";
 
+import AuthService from "../services/auth.service";
+
 function LoginPage() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit: SubmitHandler<ILoginForm> = async (data) => {
-    location.href = "/dashboard";
+    const result = await AuthService.login(data);
+    if (result) {
+      location.href = "/dashboard";
+    } else {
+      alert("Invalid credentials");
+    }
   };
 
   return (
