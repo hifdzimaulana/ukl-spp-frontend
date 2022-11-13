@@ -25,7 +25,6 @@ class AuthService {
         }
       })
       .catch((e: AxiosError) => {
-        console.log(e.response?.data);
         return false;
       });
   };
