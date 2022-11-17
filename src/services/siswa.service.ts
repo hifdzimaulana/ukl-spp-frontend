@@ -1,10 +1,10 @@
 import http from "../../http-common";
 import IPagination from "../types/pagination.type";
-import ISiswaData from "../types/siswa.type";
+import { GetAllSiswaArgs, ISiswaData } from "../types/siswa.type";
 
 class SiswaService {
-  getAll() {
-    return http.get<IPagination<ISiswaData>>("/siswa");
+  getAll(args?: GetAllSiswaArgs) {
+    return http.get<IPagination<ISiswaData>>("/siswa", { params: args });
   }
 }
 

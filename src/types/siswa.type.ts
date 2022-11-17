@@ -1,4 +1,4 @@
-export default interface ISiswaData {
+export interface ISiswaData {
   id: number;
   nama: string;
   idKelas: number;
@@ -7,3 +7,8 @@ export default interface ISiswaData {
   createdAt: string;
   updatedAt: string;
 }
+
+export type GetAllSiswaArgs = {
+  page?: number;
+  limit?: number;
+};
